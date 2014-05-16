@@ -1,4 +1,8 @@
+import sys
+import StringIO
+
 import pytest
+import mock
 
 from markey.tools import Token, TokenStream, TokenStreamIterator
 
@@ -77,3 +81,17 @@ def test_tokenstream_test_shift():
     assert s.current == Token('f', 5)
     s.next()
     assert s.current == Token('b', 2)
+
+
+def test_tokenstream_debug():
+    stream = StringIO.StringIO()
+
+    _original_stdout = sys.stdout
+    sys.stdout = stream
+
+    try:
+        s = TokenStream(iter((Token('a', 1),)))
+        s.debug()
+        assert stream.getvalue() == "Token(type='a', value=1)\n"
+    finally:
+        sys.stdout = _original_stdout
