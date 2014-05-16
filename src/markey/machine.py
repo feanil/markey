@@ -86,7 +86,7 @@ def parse_arguments(stream, end_token):
     kwargs = {}
     keywords = []
     while stream.current.type != end_token:
-        if stream.current.type in ('func_string_arg', 'text'):
+        if stream.current.type == 'func_string_arg':
             value = stream.current.value.strip('"\' ')
             stream.next()
             if keywords:
