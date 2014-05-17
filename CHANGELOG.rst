@@ -1,7 +1,13 @@
 Changelog
 =========
 
-0.1 - `master`_
----------------
+0.2 - 2014-05-17
+----------------
 
-.. note:: This version is not yet released and is under active development.
+* Fix release builds.
+
+
+0.1 - 2014-05-17
+----------------
+
+* Initial release.
