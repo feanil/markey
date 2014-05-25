@@ -1,4 +1,4 @@
-# Full functioning handlebars template parser.
+# Full functioning underscore template parser.
 
 from markey.rules import ruleset, include, rule, bygroups
 
