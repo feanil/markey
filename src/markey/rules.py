@@ -1,5 +1,5 @@
 import re
-from itertools import izip
+from markey._compat import izip
 
 
 def bygroups(*args):
