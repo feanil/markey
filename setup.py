@@ -51,7 +51,7 @@ setup(
     name='markey',
     description='Markup parser',
     long_description=read('README.rst') + u'\n\n' + read('CHANGELOG.rst'),
-    version='0.2',
+    version='0.3',
     license='BSD',
     author='Christopher Grebs',
     author_email='cg@webshox.org',
