@@ -1,4 +1,5 @@
 from markey.rules import include
+from markey._compat import force_text
 
 
 def iter_rules(x, rules):
@@ -10,7 +11,9 @@ def iter_rules(x, rules):
             yield rule
 
 
-def tokenize(string, rules):
+def tokenize(string, rules, encoding='utf-8'):
+    string = force_text(string)
+
     pos = 0
     end = len(string)
     stack = [(None, 'everything')]
