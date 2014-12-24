@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.5 - 2014-12-24
+----------------
+
+ * Force parsing to be unicode everywhere
+
 0.4 - 2014-05-25
 ----------------
 
