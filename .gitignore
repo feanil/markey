@@ -3,3 +3,6 @@ dist
 *.pyc
 markey.egg-info
 .tox
+.cache
+htmlcov
+.coverage
