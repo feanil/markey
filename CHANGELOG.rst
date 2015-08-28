@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.6 - 2015-08-28
+----------------
+
+ * Fixed removing some trailing symbols (#1, thanks kosmos342!)
+
 0.5 - 2014-12-24
 ----------------
 
