@@ -13,6 +13,15 @@ def read(*parts):
         return fp.read()
 
 
+if sys.argv[-1] == 'publish':
+    os.system('python setup.py sdist upload')
+    os.system('python setup.py bdist_wheel upload')
+    print('You probably want to also tag the version now:')
+    print('  git tag -a %s -m "version %s"' % (version, version))
+    print('  git push --tags')
+    sys.exit()
+
+
 test_requires = [
     'coverage',
     'pytest',
@@ -31,7 +40,6 @@ dev_requires = [
     'invoke',
     'twine'
 ]
-
 
 
 setup(
