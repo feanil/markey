@@ -7,6 +7,9 @@ from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
 
+version = '0.6'
+
+
 def read(*parts):
     filename = os.path.join(os.path.dirname(__file__), *parts)
     with codecs.open(filename, encoding='utf-8') as fp:
@@ -46,7 +49,7 @@ setup(
     name='markey',
     description='Markup parser',
     long_description=read('README.rst') + u'\n\n' + read('CHANGELOG.rst'),
-    version='0.6',
+    version=version,
     license='BSD',
     author='Christopher Grebs',
     author_email='cg@webshox.org',
