@@ -33,19 +33,6 @@ dev_requires = [
 ]
 
 
-class PyTest(TestCommand):
-
-    def finalize_options(self):
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        # import here, cause outside the eggs aren't loaded
-        import pytest
-        errno = pytest.main(self.test_args)
-        sys.exit(errno)
-
 
 setup(
     name='markey',
@@ -60,7 +47,6 @@ setup(
     packages=find_packages('src'),
     tests_require=test_requires,
     install_requires=install_requires,
-    cmdclass={'test': PyTest},
     extras_require={
         'docs': ['sphinx'],
         'tox': ['tox'],
