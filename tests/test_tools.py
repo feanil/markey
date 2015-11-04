@@ -2,7 +2,6 @@ import sys
 import StringIO
 
 import pytest
-import mock
 
 from markey.tools import Token, TokenStream, TokenStreamIterator
 
