@@ -81,7 +81,8 @@ def parse_arguments(stream, end_token):
     """
     Helper function for function argument parsing.  Pass it a
     `TokenStream` and the delimiter token for the argument section and
-    it will extract all position and keyword arguments.
+    it will extract all position and keyword arguments as well as
+    each argument's type info (string literal or not).
 
     Returns a ``(args, kwargs)`` tuple.
     """
@@ -101,9 +102,9 @@ def parse_arguments(stream, end_token):
                     kwargs[keyword] = value
                 del keywords[:]
             else:
-                args.append(value)
+                args.append((value, 'func_string_arg'))
         elif stream.current.type == 'text':
-            args.append(stream.current.value)
+            args.append((stream.current.value, 'text'))
             stream.next()
         elif stream.current.type == 'func_kwarg':
             keywords.append(stream.current.value)
@@ -113,6 +114,6 @@ def parse_arguments(stream, end_token):
         else:
             break
     for keyword in keywords:
-        args.append(keyword)
+        args.append((keyword, 'func_kwarg'))
 
     return tuple(args), kwargs
