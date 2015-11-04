@@ -5,7 +5,7 @@ from markey.rules import ruleset, include, rule, bygroups
 
 keywords = frozenset((
     'pluralidx', 'gettext', 'ngettext', 'gettext_noop', 'pgettext',
-    'npgettext', 'interpolate', '_'
+    'npgettext', '_'
 ))
 
 
