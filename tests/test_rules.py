@@ -1,6 +1,4 @@
 import re
-import inspect
-import pytest
 
 from markey.rules import bygroups, rule, ruleset
 

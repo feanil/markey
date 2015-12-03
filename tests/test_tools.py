@@ -1,8 +1,7 @@
 import sys
-import StringIO
+from six import StringIO
 
 import pytest
-import mock
 
 from markey.tools import Token, TokenStream, TokenStreamIterator
 
@@ -84,7 +83,7 @@ def test_tokenstream_test_shift():
 
 
 def test_tokenstream_debug():
-    stream = StringIO.StringIO()
+    stream = StringIO()
 
     _original_stdout = sys.stdout
     sys.stdout = stream

@@ -1,6 +1,5 @@
-from markey.rules import ruleset, include, rule, bygroups
-from markey.machine import iter_rules, tokenize, parse_arguments
-from markey.tools import Token, TokenStream
+from markey.machine import tokenize, parse_arguments
+from markey.tools import TokenStream
 from markey.underscore import rules as underscore_rules
 
 
@@ -10,7 +9,7 @@ def test_parse_arguments():
     stream.next()
     stream.next()
     stream.expect('gettext_begin')
-    funcname = stream.expect('func_name').value
+    stream.expect('func_name').value
     args, kwargs = parse_arguments(stream, 'gettext_end')
     assert args == (('varible', 'text'), ('some string', 'func_string_arg'),)
     assert kwargs == {'str': 'foo'}
