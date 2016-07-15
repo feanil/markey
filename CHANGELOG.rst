@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.8 - 2015-08-28
+0.8 - 2016-06-15
 ----------------
 
  * Remove `interpolate` keyword (kosmos342)
