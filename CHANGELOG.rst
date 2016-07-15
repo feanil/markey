@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.8 - 2015-08-28
+----------------
+
+ * Remove `interpolate` keyword (kosmos342)
+ * Add argument type information (louyihua)
+
 0.7 - 2015-08-28
 ----------------
 
