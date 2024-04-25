@@ -47,8 +47,8 @@ rules = {
     'function_call': ruleset(
         rule(',', 'func_argument_delimiter'),
         rule('\s+', None),
-        rule(r"('([^'\\]*(?:\\.[^'\\]*)*)'|"
-             r'"([^"\\]*(?:\\.[^"\\]*)*)")(?s)', 'func_string_arg'),
+        rule(r"(?s)('([^'\\]*(?:\\.[^'\\]*)*)'|"
+             r'"([^"\\]*(?:\\.[^"\\]*)*)")', 'func_string_arg'),
         rule(r'([\w_]+)\s*=', bygroups('func_kwarg'))
     )
 }
